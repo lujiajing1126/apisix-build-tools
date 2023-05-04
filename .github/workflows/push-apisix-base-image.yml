@@ -43,7 +43,7 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v4
         if: ${{ startsWith(steps.tag_type.outputs.version, 'apisix-base/') }}
-        timeout-minutes: 60
+        timeout-minutes: 300
         with:
           push: true
           platforms: linux/amd64,linux/arm64
