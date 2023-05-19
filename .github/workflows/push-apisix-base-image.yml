@@ -51,6 +51,7 @@ jobs:
           platforms: linux/${{ env.docker_arch }}
           tags: ghcr.io/lujiajing1126/apisix-base:${{ env.apisix_base_version }}-${{ env.docker_arch }}
           file: ./dockerfiles/Dockerfile.apisix-base.apk
+          provenance: false
           build-args: |
             VERSION=${{ env.apisix_base_version }}
 
