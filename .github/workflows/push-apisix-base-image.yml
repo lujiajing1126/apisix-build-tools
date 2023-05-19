@@ -74,7 +74,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create and push manifest images
-        uses: Noelware/docker-manifest-action@v0.3.1
+        uses: Noelware/docker-manifest-action@0.3.1
         with:
           inputs: ghcr.io/lujiajing1126/apisix-base:${{ env.apisix_base_version }}
           images: ghcr.io/lujiajing1126/apisix-base:${{ env.apisix_base_version }}-amd64,ghcr.io/lujiajing1126/apisix-base:${{ env.apisix_base_version }}-arm64
